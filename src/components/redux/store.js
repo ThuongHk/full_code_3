@@ -4,7 +4,9 @@ import staffSlice from '../staff/staffSlice';
 
 
 const store = configureStore({
-reducer: staffSlice.reducer
+reducer: {
+    staffStoreReducer: staffSlice.reducer
+} 
 })
 
 export default store
