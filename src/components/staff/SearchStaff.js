@@ -7,6 +7,8 @@ const SearchStaff = () => {
 const [ searchInput, setSearchInput] = useState('')
 const dispatch = useDispatch()
 
+this.props.parentCallback("Hey Popsie, How’s it going?");
+
 const handleSearchChange = (e) => {
     setSearchInput(e.target.value)
     dispatch(staffSlice.actions.searchListStaff(e.target.value))   

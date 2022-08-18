@@ -17,6 +17,7 @@ function App() {
   return (
     <div className="App">
     <Navbar/>
+    {/* <div>123</div> */}
    <Outlet/>
    <Footer/>
     </div>
