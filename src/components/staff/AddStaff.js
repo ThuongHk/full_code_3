@@ -73,7 +73,7 @@ const AddStaff = () => {
         department: data.department,
         annualLeave: data.annualLeave,
         overTime: data.overTime,
-        image: '/assets/images/daidien.png'
+        image:"/assets/images/alberto.png"
       }
         
       ))

@@ -27,17 +27,20 @@ const staffSlice = createSlice({
             state.status = 'loading'
         })
         .addCase(getStaffs.fulfilled, (state, action) => {
-            state.status = 'success';
-            console.log(action.payload)
+            state.status = 'success';           
             state.staff1 = action.payload;
+            console.log(action.payload)
         })
-        .addCase(addNewStaff.fulfilled , (state, action) => {
-           
+        .addCase(addNewStaff.fulfilled , (state, action) => {           
             state.staff1.push(action.payload);
             state.status = 'idle';
-            console.log();
+            console.log(action.payload);
         })
-
+        .addCase(searchStaff.fulfilled, (state, action)=>{
+            state.search1 = action.payload;
+            state.status = 'idle';
+        })
+       
         
     }
    
@@ -46,8 +49,8 @@ const staffSlice = createSlice({
  export const getStaffs = createAsyncThunk('getStaff', async ()=>{
     const res = await fetch(' https://nodejstesthatn.herokuapp.com/');
     const data = await res.json();
-    // console.log(data);
-    return data 
+    console.log(data);
+    return data
  })
 
  export const addNewStaff = createAsyncThunk('addStaff', async (newStaff) => {
@@ -60,12 +63,9 @@ const staffSlice = createSlice({
     return data
  })
 export const searchStaff = createAsyncThunk('search', async (search)=>{
-    const res = await fetch(' https://nodejstesthatn.herokuapp.com/', {
-        method: 'POST',
-        body: JSON.stringify(search)
-    })
+    const res = await fetch(' https://nodejstesthatn.herokuapp.com/');
     const data = await res.json();
-    return data
+    return data.search
 })
 
 export default staffSlice;
