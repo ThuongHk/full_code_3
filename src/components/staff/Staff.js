@@ -3,9 +3,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import SearchStaff from './SearchStaff';
 import { useSelector } from 'react-redux';
-import { showListStaffAll, showListStaffSelector} from '../redux/selector';
+import { showListStaffAll, showListStaffSelector} from '../redux/selectors';
 import AddStaff from './AddStaff';
-// import { useState } from 'react';
+import { useState } from 'react';
 
 const Staff = () => {
   // const [ searchInput, setSearchInput] = useState('')
@@ -19,7 +19,7 @@ const Staff = () => {
   //   );
   // }
     
-    // const dataScreen = useSelector(state => state.staffStoreReducer.staff1.filter(staff => staff.name.toLowerCase().includes(searchInput.toLowerCase())))
+  //   const dataScreen = useSelector(state => state.staffStoreReducer.staff1.filter(staff => staff.name.toLowerCase().includes(searchInput.toLowerCase())))
     const dataScreen = useSelector(showListStaffAll)
     // const {staff1, status} = dataScreen
       console.log(dataScreen);

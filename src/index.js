@@ -12,6 +12,7 @@ import DetailStaff from './components/staff/DetailStaff';
 import NotFound from './components/notfound/NotFound';
 import { Provider } from 'react-redux';
 import store from './components/redux/store';
+import DetailDepartment from './components/department/DetailDepartment';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -23,6 +24,7 @@ root.render(
         <Route path='staff' element={<Staff/>}/>
         <Route path='staff/:id' element={<DetailStaff/>}/>
         <Route path='department' element={<Department/>}/>
+        <Route path='department/:departmentId' element={<DetailDepartment/>}/>
         <Route path='salary' element={<Salary/>}/>
         <Route path='*' element={<NotFound/>}/>
       </Route>

@@ -1,7 +1,7 @@
 import React from 'react';
 // import { STAFFS } from '../staff/staffs';
 import { useSelector } from 'react-redux/es/exports';
-import { showListStaffSelector } from '../redux/selector';
+import { showListStaffSelector } from '../redux/selectors';
 
 const Salary = () => {
 

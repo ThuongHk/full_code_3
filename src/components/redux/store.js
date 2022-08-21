@@ -1,4 +1,5 @@
 import {configureStore} from '@reduxjs/toolkit';
+import departmentSlice from '../department/departmentSlice';
 import staffSlice from '../staff/staffSlice';
 // import thunk from 'redux-thunk';
 // import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
@@ -6,7 +7,8 @@ import staffSlice from '../staff/staffSlice';
 
 const store = configureStore({
 reducer: {
-    staffStoreReducer: staffSlice.reducer
+    staffStoreReducer: staffSlice.reducer,
+    staffStoreDep: departmentSlice.reducer
 } 
 })
 

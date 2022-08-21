@@ -70,7 +70,7 @@ const AddStaff = () => {
         doB: data.birthday,
         salaryScale: data.salaryScale,
         startDate:data.startDate,
-        department: data.department,
+        departmentId: data.departmentId,
         annualLeave: data.annualLeave,
         overTime: data.overTime,
         image:"/assets/images/alberto.png"
@@ -110,7 +110,7 @@ const AddStaff = () => {
           </div>
           <div class="form-group">
             <label for="">Phòng ban: </label>
-            <select class="form-control"  id=""  {...register('department')}>
+            <select class="form-control"  id=""  {...register('departmentId')}>
               <option value='Maketing'>Maketing</option>
               <option value='It'>It</option>
               <option value='Sale'>Sale</option>
