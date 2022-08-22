@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { getDepartments } from './departmentSlice';
 import {showListDepartmentSelector} from '../redux/selectors';
 import { getStaffs } from '../staff/staffSlice';
+import './Department.css';
 
 const Department = () => {
      const dispatch = useDispatch()
@@ -16,12 +17,12 @@ const Department = () => {
      console.log(dataScreenDep);
     const showListDepartments = dataScreenDep.map(dep => {
         return(
-            <div className="col-md-4 col-sm-3 mt-4 mb-4">
+            <div className="col-md-4 col-sm-3 mt-4 mb-4" key={dep.id}>
                 <Link to={`/department/${dep.id}`}>
                 <div className="card">       
                 <div className="card-body">
                     <h4 className="card-title">Phòng Ban: {dep.name}</h4>
-                    <p className="card-text">Số lượng nhân viên</p>
+                    <p className="card-text">Số lượng nhân viên: {dep.numberOfStaff}</p>
                 </div>               
                </div>
             </Link>

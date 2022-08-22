@@ -14,10 +14,10 @@ const DetailDepartment = () => {
   const showListStaffSelectorScreen = listStaffDepartments.filter(depar =>depar.departmentId === (departmentId))
   console.log(ShowDetailDepartments);
   console.log(showListStaffSelectorScreen);
-  const showDataDepartment = ShowDetailDepartments.map((depar) => {
+  const showDataDepartment = ShowDetailDepartments.map((depart) => {
     return (
-      <div>
-      <h5>Nhân Viên Phòng: {depar.name}</h5>
+      <div key={depart.id}>
+      <h5>Nhân Viên Phòng: {depart.name}</h5>
       
         </div>
     );

@@ -86,31 +86,31 @@ const AddStaff = () => {
       <Modal title="Thông Tin Nhân Viên" visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
        <form onSubmit={handleSubmit(submitForm)}>
           <div className="form-group">
-            <label for="">Họ tên:</label>
+            <label>Họ tên:</label>
             <input type="text"  className="form-control" {...register('fullname')} />
             {errors.fullname && <p className="error">{errors.fullname?.message}</p>}             
           </div>
           <div className="form-group">
-            <label for="">Ngày sinh:</label>
+            <label>Ngày sinh:</label>
             <input type="date"  className="form-control" {...register('birthday')} />   
             {errors.birthday && <p className="error">{errors.birthday?.message}</p>}             
 
           </div>
           <div className="form-group">
-            <label for="">Hệ số lương:</label>
+            <label>Hệ số lương:</label>
             <input type="number"  className="form-control" {...register('salaryScale')} />  
             {errors.salaryScale && <p className="error">{errors.salaryScale?.message}</p>}             
 
           </div>
           <div className="form-group">
-            <label for="">Ngày vào công ty:</label>
+            <label>Ngày vào công ty:</label>
             <input type="date"  className="form-control" {...register('startdate')} /> 
             {errors.startdate && <p className="error">{errors.startdate?.message}</p>}             
 
           </div>
-          <div class="form-group">
-            <label for="">Phòng ban: </label>
-            <select class="form-control"  id=""  {...register('departmentId')}>
+          <div className="form-group">
+            <label>Phòng ban: </label>
+            <select className="form-control"  id=""  {...register('departmentId')}>
               <option value='Maketing'>Maketing</option>
               <option value='It'>It</option>
               <option value='Sale'>Sale</option>
@@ -119,13 +119,13 @@ const AddStaff = () => {
             </select>
           </div>
           <div className="form-group">
-            <label for="">Số ngày nghỉ còn lại:</label>
+            <label>Số ngày nghỉ còn lại:</label>
             <input type="number"  className="form-control" {...register('annualLeave')} /> 
             {errors.annualLeave && <p className="error">{errors.annualLeave?.message}</p>}             
 
           </div>
           <div className="form-group">
-            <label for="">Số ngày làm thêm:</label>
+            <label>Số ngày làm thêm:</label>
             <input type="number"  className="form-control" {...register('overTime')} /> 
             {errors.overTime && <p className="error">{errors.overTime?.message}</p>}             
 

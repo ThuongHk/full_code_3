@@ -35,12 +35,7 @@ const staffSlice = createSlice({
             state.staff1.push(action.payload);
             state.status = 'idle';
             console.log(action.payload);
-        })
-        // .addCase(searchStaff.fulfilled, (state, action)=>{
-        //     state.search1 = action.payload;
-        //     state.status = 'idle';
-        // })
-       
+        })            
         
     }
    
@@ -62,10 +57,6 @@ const staffSlice = createSlice({
     console.log(data);
     return data
  })
-// export const searchStaff = createAsyncThunk('search', async (search)=>{
-//     const res = await fetch(' https://nodejstesthatn.herokuapp.com/');
-//     const data = await res.json();
-//     return data.search
-// })
+
 
 export default staffSlice;

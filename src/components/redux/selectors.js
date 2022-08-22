@@ -9,7 +9,7 @@ export const showListStaffAll = createSelector(
   showListSearchSelector,
   (staffSelector, searchStaffSelector) => {
     return staffSelector.filter(sta => {
-      return sta.name.includes(searchStaffSelector);
+      return sta.name?.includes(searchStaffSelector);
     });
   }
 );
