@@ -23,7 +23,7 @@ const schema = yup.object().shape({
      startdate: yup
      .string()
      .required('Vui lòng nhập ngày vào công ty'),
-     department: yup
+     departmentId: yup
      .string()
      .required('Vui lòng chọn phòng ban'),
      annualLeave: yup
@@ -65,11 +65,11 @@ const AddStaff = () => {
 
       // }))
       dispatch(addNewStaff({
-        id: uuidv4(),
+        // id: uuidv4(),
         name: data.fullname,
-        doB: data.birthday,
+        doB: new Date(data.birthday),
         salaryScale: data.salaryScale,
-        startDate:data.startDate,
+        startDate: new Date( data.startDate),
         departmentId: data.departmentId,
         annualLeave: data.annualLeave,
         overTime: data.overTime,
@@ -104,8 +104,8 @@ const AddStaff = () => {
           </div>
           <div className="form-group">
             <label>Ngày vào công ty:</label>
-            <input type="date"  className="form-control" {...register('startdate')} /> 
-            {errors.startdate && <p className="error">{errors.startdate?.message}</p>}             
+            <input type="date"  className="form-control" {...register('startDate')} /> 
+            {errors.startDate && <p className="error">{errors.startDate?.message}</p>}             
 
           </div>
           <div className="form-group">
